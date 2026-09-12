@@ -1,18 +1,8 @@
-# NCL gate library
-## steps for installing
+# QDI Framework Simulation only
+## steps for installing in vivado
 
 1. add the base directory to vivado design sources in library "qdi_framework" (use add directory)
-2. add scripts/ncl.xdc as constraint source
-3. run scripts/setup.tcl using Tools -> Run Tcl script
 
 ## usage information
 
-when using provided completion_loop and bridge modules, this is not required
-
-every acknowledge path must be marked using a LUT1 buffer (config string "10")
-* put attribute DONT_TOUCH onto the buffer
-* put attribute NCL_WIRE_TYPE with value "ACK" onto the buffer
-
-every datapath from ncl to clocked logic and clocked logic to ncl must be marked using a LUT1 buffer
-* put attribute DONT_TOUCH onto the buffer
-* put attribute NCL_WIRE_TYPE with value "NCL_CLK" onto the buffer
+This library is provided as is. I did not have the time to test it.
